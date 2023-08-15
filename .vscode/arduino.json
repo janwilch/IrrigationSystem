@@ -1,0 +1,7 @@
+{
+    "sketch": "IrrigationSystem.ino",
+    "output": "build",
+    "board": "arduino:avr:uno",
+    "port": "COM4",
+    "programmer": "avrispmkii"
+}
