@@ -9,7 +9,7 @@ OnDelayTimer::~OnDelayTimer()
 {
 }
 
-bool OnDelayTimer::IsElapsed(unsigned int ms)
+bool OnDelayTimer::IsElapsed(unsigned long ms)
 {
     if (OnDelayTimer::currentDelta != ms)
     {

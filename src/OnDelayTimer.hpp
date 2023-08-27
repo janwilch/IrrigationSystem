@@ -4,8 +4,8 @@
 class OnDelayTimer
 {
 private:
-    unsigned int currentDelta;
-    unsigned int endMillis;
+    unsigned long currentDelta;
+    unsigned long endMillis;
 
 public:
     OnDelayTimer();
@@ -14,7 +14,7 @@ public:
     /// @brief Check whether the specified time delta has elapsed. If the delta changes, the timer restarts.
     /// @param ms The time delta to wait for.
     /// @return True, if the specified delta has elapsed.
-    bool IsElapsed(unsigned int ms);
+    bool IsElapsed(unsigned long ms);
 
     /// @brief Resets the time delta.
     void Reset();
