@@ -76,7 +76,7 @@ void loop()
     // DELAY BEFORE TAKING MEASUREMENT
     case State::AWAIT_MEASUREMENT:
     {
-        if (ton.IsElapsed(2000))
+        if (ton.IsElapsed(1000))
         {
             state = State::MEASURING;
             ton.Reset();
