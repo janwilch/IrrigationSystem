@@ -1,7 +1,6 @@
 # Prerequisites
 * Do **not** use the official Arduino IDE, it sucks
-* Visual Studio Code
-* Arduino Extension (https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
+* Visual Studio Code with [Arduino Extension](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
   * When prompted, select "Use bundled arduino-cli" (alternatively, you have to install the official Arduino IDE and set its path in the extension settings)
   * Using the Arduino Board Manager (within the extension; just click on "select board" at the bottom), install the "Arduino AVR Boards" package
   * You'll probably have to restart VS Code after that
@@ -27,6 +26,8 @@ The main state machine of the program can be seen in [IrrigationSystem.ino](Irri
 Note that the relay representation is not accurate. In reality, all relays are located on one PCB that is connected to the board's 5V VCC and GND. To switch one of the relays, the respective control pin (D2 - D6) must be pulled to LOW.
 
 ![Circuit Diagram](circuit.svg)
+
+Edit online: https://crcit.net/c/f2c2c0cfaf1b4d75b0676bb71ba272d4
 
 ## Piping
 The pump (located at the bottom of the control cabinet) has an inlet connected to the tank's cap. Its outlet is routed via an 8-wise splitter to five NC valves. These valves are opened via the respective relay to pass water through.
