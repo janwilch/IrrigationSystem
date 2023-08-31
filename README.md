@@ -22,10 +22,20 @@ The main state machine of the program can be seen in [IrrigationSystem.ino](Irri
 
 **NOTE:** The project uses [resistive moisture sensors](https://www.az-delivery.de/products/feuchtigkeitssensor-modul?_pos=1&_sid=b3e597e6f&_ss=r), which corrode when current is flowing. Thus, they should only be switched on when actually needed (a measurement time of 1 s every 10 min was chosen arbitrarily). Alternatively, [capacitive moisture sensors](https://www.az-delivery.de/products/bodenfeuchte-sensor-modul-v1-2?_pos=3&_sid=b3e597e6f&_ss=r) can be used that do not corrode but possess only an analog output. In that case, I would have had to implement the comparator logic (using potis and LM393 ICs) myself, which I did not want to bother with 🙃.
 
-## Circuit Diagram
-Note that the relay representation is not accurate. In reality, all relays are located on one PCB that is connected to the board's 5V VCC and GND. To switch one of the relays, the respective control pin (D2 - D6) must be pulled to LOW.
+## Cabinet
+The cabinet has one inlet to connect to the water tank and five outlets. Each outlet corresponds to one resistive moisture sensor whose threshold is set using one potentiometer inside the cabinet. The corresponding groups of outlet, sensor, and poti are numbered in the image below.
 
-![Circuit Diagram](circuit.svg)
+One of the poti's segments is marked black and can be moved in a 270° range. Position it as follows:
+* Bottom: always off
+* Left: on in every watering cycle
+* Typically, the poti should be positioned in the "moist" to "dry" area as shown in the image
+
+![Cabinet Photo](img/cabinet.png)
+
+## Wiring
+**NOTE:** The relay representation is not accurate. In reality, all relays are located on one PCB that is connected to the board's 5V VCC and GND. To switch one of the relays, the respective control pin (D2 - D6) must be pulled to LOW.
+
+![Circuit Diagram](/img/circuit.svg)
 
 Edit online: https://crcit.net/c/f2c2c0cfaf1b4d75b0676bb71ba272d4
 
